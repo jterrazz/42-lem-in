@@ -6,7 +6,7 @@
 /*   By: jterrazz <jterrazz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/14 23:46:45 by jterrazz          #+#    #+#             */
-/*   Updated: 2017/08/15 01:15:49 by jterrazz         ###   ########.fr       */
+/*   Updated: 2017/08/16 02:56:57 by jterrazz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,16 @@ static int		init_room_next(t_flags *flags, char *line, t_room *room)
 
 static int		check_is_only_name(t_flags *flags, t_room *new)
 {
-	t_room *temp;
+	t_room	*temp;
+	int		i;
 
+	i = 0;
+	while(new->name[i])
+	{
+		if (new->name[i] == '-')
+			return (0);
+		i++;
+	}
 	temp = flags->rooms;
 	while (temp)
 	{
