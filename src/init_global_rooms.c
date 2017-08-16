@@ -6,7 +6,7 @@
 /*   By: jterrazz <jterrazz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/14 23:46:45 by jterrazz          #+#    #+#             */
-/*   Updated: 2017/08/16 02:56:57 by jterrazz         ###   ########.fr       */
+/*   Updated: 2017/08/16 03:03:52 by jterrazz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ static int		check_is_only_name(t_flags *flags, t_room *new)
 	int		i;
 
 	i = 0;
-	while(new->name[i])
+	while (new->name[i])
 	{
 		if (new->name[i] == '-')
 			return (0);
